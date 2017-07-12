@@ -1,0 +1,214 @@
+@import 'feta';
+@import '_tooltip';
+
+body,html {
+  text-align: center;
+}
+
+// div {
+//   outline: 1px solid tomato;
+// }
+
+.interactive-shell {
+  max-width: 960px;
+}
+
+.chart-container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.counties {
+  fill: #f5f5f5;
+}
+
+.active-county {
+  stroke: #4a4a4a;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+.county-map > .states { pointer-events: none; }
+
+.map-header-search {
+  /*text-align: right*/
+  padding-top: 10px;
+}
+
+/*.map-header-key { text-align: left }*/
+
+.map-header-search, .map-header-key {
+  width: 50%;
+  float: left;
+}
+
+.legend-title {
+  font-family: $sans;
+  font-weight: 500;
+  text-anchor: start;
+  font-size: 12px;
+  /*text-transform: uppercase;*/
+  fill: #4a4a4a;
+}
+.tick line { stroke: #4a4a4a }
+
+.tick text {
+  font-family: $mono;
+  fill: #4a4a4a;
+}
+
+@media( max-width: 710px ) {
+
+  .map-header-key {
+    float: none;
+    width: auto;
+    margin-top: 14px;
+  }
+
+  .map-header-search {
+    float: none;
+    width: auto;
+  }
+
+}
+
+
+
+.chosen-container {
+  display: block;
+  margin: 0 auto;
+  font-family: $sans;
+  .chosen-results {
+    color: #4a4a4a;
+    font-size: 13px;
+  }
+}
+
+.chosen-container-single .chosen-single,
+.chosen-container .chosen-container-single .chosen-container-active .chosen-with-drop {
+  background: #fff;
+  background-image: none !important;
+  box-shadow: none;
+  border: solid 1px #dcdcdc;
+  border-radius: 3px;
+  span {
+    color: #4a4a4a;
+    font-size: 13px;
+  }
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  border-bottom: 0;
+  border: solid 1px #dcdcdc;
+}
+
+.chosen-container-single .chosen-single { height: 33px }
+.chosen-container-single .chosen-single span { line-height: 33px }
+
+.chosen-drop {
+  background: #fff;
+  box-shadow: none !important;
+  border: solid 1px #dcdcdc;
+  border-radius: 0 0 3px 3px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-drop {
+  border: solid 1px #dcdcdc;
+  border-top: 0;
+}
+
+.chosen-container-single .chosen-single div {
+  width: 24px;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background-image: none;
+  background: #ffe9d5;
+  color: #4a4a4a;
+}
+
+.chosen-container-single .chosen-single div b {
+  background: url('https://graphics.axios.com/2017-02-21-trucking-jobs-choropleth/img/down-arrow.svg') 0 0 no-repeat !important;
+  background-image: url('https://graphics.axios.com/2017-02-21-trucking-jobs-choropleth/img/down-arrow.svg') !important;
+  background-position: 0 !important;
+  background-size: 12px !important;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+  background: url('https://graphics.axios.com/2017-02-21-trucking-jobs-choropleth/img/up-arrow.svg') 0 0 no-repeat !important;
+  background-image: url('https://graphics.axios.com/2017-02-21-trucking-jobs-choropleth/img/up-arrow.svg') !important;
+  background-position: 0 !important;
+  background-size: 12px !important;
+}
+
+.blue100 { fill: #96d8ff; }
+.blue200 { fill: #75cdf9; }
+.blue300 { fill: #3faff3; }
+.blue400 { fill: #069cda; }
+.blue500 { fill: #008dc8; }
+.blue600 { fill: #027bb9; }
+.blue700 { fill: #0064a3; }
+.blue800 { fill: #004e89; }
+.blue900 { fill: #01356e; }
+
+.tomato100 { fill: #ffd1c6; }
+.tomato200 { fill: #ffb3a0; }
+.tomato300 { fill: #fb937a; }
+.tomato400 { fill: #f97353; }
+.tomato500 { fill: #e74e29; }
+.tomato600 { fill: #d9421e; }
+.tomato700 { fill: #ca330f; }
+.tomato800 { fill: #ba2f0e; }
+.tomato900 { fill: #b1290a; }
+
+.orange100 { fill: #ffd7b2; }
+.orange200 { fill: #ffd0a1; }
+.orange300 { fill: #ffb87e; }
+.orange400 { fill: #ff9b5a; }
+.orange500 { fill: #ff7921; }
+// .orange600 { fill: #ff6602; }
+.orange600 { fill: #e15300; }
+.orange700 { fill: #f35d00; }
+.orange800 { fill: #e15300; }
+.orange900 { fill: #d44b00; }
+
+.purple100 { fill: #d1cdff; }
+.purple200 { fill: #b7b0ff; }
+.purple300 { fill: #9686f7; }
+.purple400 { fill: #7d61e1; }
+.purple500 { fill: #6741d4; }
+.purple600 { fill: #602fca; }
+.purple700 { fill: #551bb7; }
+.purple800 { fill: #4713a2; }
+.purple900 { fill: #3d0e87; }
+
+.khaki100 { fill: #ebe2d7; }
+.khaki200 { fill: #dbcfc1; }
+.khaki300 { fill: #d3c3af; }
+.khaki400 { fill: #c1af9a; }
+.khaki500 { fill: #b09d86; }
+.khaki600 { fill: #a8947b; }
+.khaki700 { fill: #a18c72; }
+.khaki800 { fill: #947f65; }
+.khaki900 { fill: #846f55; }
+
+#map-hacky-fallback {
+  display: none;
+}
+
+@media(max-width: 300px) {
+  #map {
+    display: none;
+  }
+
+  #map-hacky-fallback {
+    display: block;
+  }
+}

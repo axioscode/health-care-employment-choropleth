@@ -1,0 +1,12 @@
+{
+  "project": {
+    "name": "2017 06 06 healthcare jobs map",
+    "slug": "2017-06-06-healthcare-jobs-map",
+    "description": ""
+  },
+  "s3": {
+    "bucket": "graphics.axios.com",
+    "folder": "2017-06-05-2017-06-06-healthcare-jobs-map"
+  },
+  "files": []
+}
